@@ -39,6 +39,9 @@ Package.resolved
 .env.local
 .env.*.local
 
+# Firebase/Google Services (не коммитить конфиги с ключами!)
+GoogleService-Info.plist
+
 # Temporary files
 *.tmp
 *.temp
