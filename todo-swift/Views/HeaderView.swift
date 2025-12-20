@@ -19,26 +19,28 @@ struct HeaderView: View {
                 RoundedRectangle(cornerRadius: 0)
                     .foregroundColor(background)
                     .rotationEffect(Angle(degrees: angle))
+                    .frame(width: proxy.size.width * 3, height: 350)
+                    .position(x: proxy.size.width / 2, y: 175)
+                
                 VStack {
                     Text(title)
                         .font(.system(size: 50))
-                        .foregroundColor(Color.white)
+                        .foregroundColor(.white)
                         .bold()
                     
                     Text(subtitle)
                         .font(.system(size: 30))
-                        .foregroundColor(Color.white)
+                        .foregroundColor(.white)
                 }
-                .padding(.top, 30)
+                .padding(.top, 80)
             }
-            .frame(width: proxy.size.width * 3, height: 300)
-            .position(x: proxy.size.width / 2, y: 150) // сохраняем шапку видимой внутри области GeometryReader
+            .offset(y: -150)
         }
-        .frame(height: 300)
-        .offset(y: -100)
+        .frame(height: 350)
     }
 }
 
 #Preview {
     HeaderView(title: "Title", subtitle: "Subtitle", angle: 15, background: .blue)
 }
+
