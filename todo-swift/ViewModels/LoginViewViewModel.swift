@@ -5,19 +5,38 @@
 //  Created by Андрей Ромашев on 13.12.2025.
 //
 
+import FirebaseAuth
 import Combine
+import Foundation
 
 class LoginViewViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
+    @Published var errorMessage = ""
     
     init() {}
     
     func login() {
-        
+        guard validate() else {
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password)
     }
     
-    func validate() {
+    private func validate() -> Bool {
+        errorMessage = ""
+        guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
+            
+            errorMessage = "Please fill in all fields"
+            return false
+        }
         
+        guard email.contains("@") && email.contains(".") else {
+            errorMessage = "Please inter alid email"
+            return false
+        }
+        
+        return true
     }
 }
