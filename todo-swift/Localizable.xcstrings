@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@" : {
+
+    },
     "action_create_account" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -207,6 +210,9 @@
           }
         }
       }
+    },
+    "Delete" : {
+
     },
     "header_register" : {
       "extractionState" : "manual",
