@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HeaderView: View {
-    let title: String
-    let subtitle: String
+    let title: LocalizedStringKey
+    let subtitle: LocalizedStringKey
     let angle: Double
     let background: Color
     

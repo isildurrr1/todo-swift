@@ -12,20 +12,25 @@ struct RegisterView: View {
     
     var body: some View {
         VStack {
-            HeaderView(title: "Register", subtitle: "Start organizing todos", angle: -15, background: .orange)
+            HeaderView(
+                title: "header_register",
+                subtitle: "subheader_start_organizing",
+                angle: -15,
+                background: .orange
+            )
             
             Form {
-                TextField("Full name", text: $viewModel.name)
+                TextField("auth_full_name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
-                TextField("Email Address", text: $viewModel.email)
+                TextField("auth_email_address", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
-                SecureField("Password", text: $viewModel.password)
+                SecureField("auth_password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
-                TLButton(title: "Create Account", background: .green) {
+                TLButton(title: "action_create_account", background: .green) {
                     viewModel.register()
                 }
             }

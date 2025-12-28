@@ -23,11 +23,12 @@ struct MainView: View {
         TabView {
             TodoListView(userId: viewModel.currentUserId)
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("tab_home_title", systemImage: "house")
                 }
+            
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.circle")
+                    Label("tab_profile_title", systemImage: "person.circle")
                 }
         }
     }
@@ -36,3 +37,4 @@ struct MainView: View {
 #Preview {
     MainView()
 }
+

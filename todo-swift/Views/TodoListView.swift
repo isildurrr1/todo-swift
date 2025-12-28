@@ -20,15 +20,20 @@ struct TodoListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("TodoListView loaded")
+                
             }
-            .navigationTitle("To Do List")
+            .navigationTitle("todo_list_title")
             .toolbar {
                 Button {
                     // Action
+                    viewModel.showingNewItemView = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $viewModel.showingNewItemView) {
+                NewItemView(newItemPresented:
+                                $viewModel.showingNewItemView)
             }
         }
     }

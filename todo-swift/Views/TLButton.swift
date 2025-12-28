@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TLButton: View {
-    let title: String
+    let title: LocalizedStringKey
     let background: Color
     let action: () -> Void
     var body: some View {
