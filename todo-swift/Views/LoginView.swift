@@ -12,7 +12,7 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 HeaderView(title: "To Do List", subtitle: "Get things done", angle: 15, background: .pink)
                 

@@ -7,12 +7,19 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+               
+            }
+            .navigationTitle("Profile")
+        }
     }
 }
 
 #Preview {
-    SwiftUIView()
+    ProfileView()
 }
