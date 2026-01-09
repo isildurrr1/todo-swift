@@ -50,6 +50,23 @@
         }
       }
     },
+    "action_log_out" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log Out"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
+        }
+      }
+    },
     "action_save" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -214,6 +231,9 @@
     "Delete" : {
 
     },
+    "Email" : {
+
+    },
     "header_register" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -259,6 +279,15 @@
           }
         }
       }
+    },
+    "Loading Profile..." : {
+
+    },
+    "Member Since: " : {
+
+    },
+    "Name" : {
+
     },
     "profile_title" : {
       "extractionState" : "manual",
